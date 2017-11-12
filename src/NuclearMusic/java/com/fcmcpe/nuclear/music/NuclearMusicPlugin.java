@@ -101,7 +101,7 @@ public class NuclearMusicPlugin extends PluginBase {
     class NuclearMusicListener implements Listener {
         @EventHandler
         public void onBlockTouch(PlayerInteractEvent event) {
-            if (event.getAction() != PlayerInteractEvent.RIGHT_CLICK_BLOCK) return;
+            if (event.getAction() != PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK) return;
             if (!event.getPlayer().isCreative()) return;
             if (event.getPlayer().getInventory().getItemInHand().getId() != Item.DIAMOND_HOE) return;
             if (event.getBlock().getId() != Item.NOTEBLOCK) return;
